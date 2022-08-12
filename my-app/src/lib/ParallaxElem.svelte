@@ -49,7 +49,11 @@
           ) 
           scale(var(--scalespeed))
         ;*/
-        transform: translateY( calc(var(--offset) * 100%)) translateZ(calc(var(--speed) * 1px)) scale(calc(1 + (var(--speed) * -1) / 8));
+        transform: 
+          translateX(calc((var(--speed)/2 / 8) * 1%)) 
+          translateY( calc(var(--offset) * 100%)) 
+          translateZ(calc(var(--speed) * 1px)) 
+          scale(calc(1 + (var(--speed) * -1) / 8));
         /*transform-origin: 50% 100%;*/
         transform-origin: 100% 50%;
       }
