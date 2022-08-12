@@ -38,8 +38,8 @@
     mix-blend-mode: var(--blend);
 }
 
-    @media screen and (min-width: 40em) {
-      @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+    /*@media screen and (min-width: 40em) {*/
+      @supports ((perspective: 1px)/* and (not (-webkit-overflow-scrolling: touch))*/) {
         .parallaxElem{
 /*        transform: 
           translate3D(
@@ -57,6 +57,6 @@
         /*transform-origin: 50% 100%;*/
         transform-origin: 100% 50%;
       }
-    }
+    /*}*/
   }
 </style>
