@@ -11,11 +11,11 @@
 
   <section style="padding-top: 0; padding-bottom: 25vh;" bind:offsetHeight={sectionHeights[0]}>
 
-    <ParallaxElem speed="-80" height={sectionHeights[0]}>
+    <ParallaxElem speed="-40" height={sectionHeights[0]}>
       <img style="position:absolute; width:100vw; height:100vh; top:0; right:0; object-position: right bottom; object-fit: cover; image-rendering: pixelated;" src="lighthouse/sky_dithering.png" />
     </ParallaxElem>
 
-    <ParallaxElem speed="-20" blend="multiply" height={sectionHeights[0]}>
+    <ParallaxElem speed="-10" blend="multiply" height={sectionHeights[0]}>
       <img style="height: 100vh; margin-right: auto;" src="lighthouse/lighthouse_bw.jpg" />
     </ParallaxElem>
 
@@ -90,10 +90,15 @@
 
   </section>
 
-  <section bind:offsetHeight={sectionHeights[3]}>
-    <ParallaxElem speed="-20" top={sectionHeights[0] + sectionHeights[1] + sectionHeights[2]} offset={0.25} height={sectionHeights[3]}>
+  <section style="
+  background-image: url('lighthouse/darktexture.jpg');
+  background-size: 100% auto;
+  background-attachment: fixed;
+  "
+  bind:offsetHeight={sectionHeights[3]}>
+<!--     <ParallaxElem speed="-10" top={sectionHeights[0] + sectionHeights[1] + sectionHeights[2]} offset={0.2} height={sectionHeights[3]}>
     <img style="position: absolute; left:0; right:0; top:0; width:100%; height:100%; object-fit: cover;" src="lighthouse/darktexture.jpg" />
-  </ParallaxElem>
+  </ParallaxElem> -->
 
     <Autolayout x={.35} y={.5} style="
       position: relative; min-height: 70vh;
