@@ -88,7 +88,7 @@
         transform: translateY(15%);
         z-index: 100;
       ">
-        <img style="width: 100vh; max-width: 90vw; position: relative;" src="lighthouse/rpg_island.png" />
+        <img style="width: min(85vh, 90vw); position: relative;" src="lighthouse/rpg_island.png" />
       </Autolayout>
     </ParallaxElem>
 
