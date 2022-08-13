@@ -48,27 +48,27 @@
       <img style="position: absolute; bottom:0; left:20%; height:calc(100%); min-width: 80%; align-self: stretch; mix-blend-mode:multiply;" src="lighthouse/wavesglitch.jpg" />
     </ParallaxElem>
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-      <span> He told the seller he needed to "try it on for size"</span>
-      <span style="margin-left: 3em">He borrowed a boat and brought six middle school boys out to camp</span>
+      <span class="stroked medium-11"> He told the seller he needed to "try it on for size"</span>
+      <span class="stroked large-4 indented">He borrowed a boat and brought six middle school boys out to camp</span>
     </div>
-    <section class="horizontal" style="padding: 5em 0;">
+    <div class="horizontal" style="padding: 5em 0;">
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-        <span>A killer whale named Luna kept swimming up to us</span>
-        <span style="margin-left: 3em">driving away the fish</span>
-        <span>he must have been lonely.</span>
+        <span class="stroked medium-13">A killer whale named Luna kept swimming up to us</span>
+        <span class="stroked small-12 indented">driving away the fish</span>
+        <span class="stroked small-15">he must have been lonely.</span>
       </div>
       <!-- <img style="width: 100vh; max-width: 50%; position: relative;" src="lighthouse/photorealistic_whale.png" /> -->
-      <figure style="margin:0; position: relative; width: 140vh; max-width: 50%; ">
+      <figure style="margin:0; padding: 1em; position: relative; width: 45em; max-width: 100vw; ">
 <!--         <img style="width: 100%; position:absolute; top: 0; left:0;" src="lighthouse/luna.webp">
  -->        <video style="width:100%;" src="lighthouse/luna.mp4" muted autoplay loop></video>
         <figcaption><a href="https://www.youtube.com/watch?v=-YzeOnF1I58">(Source)</a></figcaption>
       </figure>
 
       
-    </section>
+    </div>
     <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-      <span style="margin-left: 3em">I resisted pressing my hand against his thick slick skin </span>
-      <span style="margin-left: 3em">as a boat full of sightseers snapped pictures of us on disposable cameras</span>
+      <span class="stroked medium-15">I resisted pressing my hand against his thick slick skin </span>
+      <span class="stroked large-8 indented">as a boat full of sightseers snapped pictures of us on disposable cameras</span>
     </div>
 
 
@@ -78,7 +78,7 @@
   <section style="min-height: 100vh;" bind:offsetHeight={sectionHeights[2]}>
 
     <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1]} offset={-0.5}>
-      <img style="width:40em; max-width:80%; image-rendering: pixelated; position: relative;" src="lighthouse/orcawhale.gif" />
+      <img style="width:40em; max-width:95vw; image-rendering: pixelated; position: relative;" src="lighthouse/orcawhale.gif" />
     </ParallaxElem>
 
     <img style="position: absolute; right:0; bottom:0; height:100%; width:100%;" src="lighthouse/pixelsort_waves.png" />
@@ -94,10 +94,10 @@
 
     <Autolayout x={.35} y={.35}>
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-        <span>Only me and one other boy wanted to fish again the next day</span>
-      <span>The others planned to collect sticks and explore.</span>
-      <span style="margin-left: 3em">We left our friends in their tents </span>
-      <span style="margin-left: 3em">and set out towards the lighthouse.</span>
+        <span class="stroked large-1">Only me and one other boy wanted to fish again the next day</span>
+      <span class="stroked medium-12">The others planned to collect sticks and explore.</span>
+      <span class="stroked medium-2 indented">We left our friends in their tents </span>
+      <span class="stroked medium-6 indented">and set out towards the lighthouse.</span>
       </div>
     </Autolayout>
 
@@ -118,43 +118,56 @@
     ">
 
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-        <span>Our chaperone slept alone on the floor below</span>
-        <span>as we laid in sleeping bags side by side</span>
-        <span style="margin-left: 3em">whispering, staring into each other</span>
+        <span class="stroked medium-9">Our chaperone slept alone on the floor below</span>
+        <span class="stroked medium-7">as we laid in sleeping bags side by side</span>
+        <span class="stroked medium-4 indented">whispering, staring into each other</span>
         <span class="spacer"></span>
-        <span>I wanted to kiss him.</span>
+        <span class="stroked small-13">I wanted to kiss him.</span>
       </div>
 
     </Autolayout>
 
-    <section class="horizontal">
-      <img style="position: relative; width: 75vh; max-width: 50%; position: relative;" src="lighthouse/boys.png" />
+    <div class="horizontal">
+      <img style="position: relative; width: 35em; padding: 1em; max-width: calc(100vw - 2em);" src="lighthouse/boys.png" />
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-        <span>When I got up to use the bathroom</span>
-        <span>I thought I saw a look flash across his face.</span>
-        <span style="margin-left: 3em">When I returned he was asleep.</span>
+        <span class="stroked medium-5">When I got up to use the bathroom</span>
+        <span class="stroked medium-10">I thought I saw a look flash across his face.</span>
+        <span class="stroked medium-3 indented">When I returned he was asleep.</span>
       </div>
-    </section>
+    </div>
 
 <div style="position: relative; min-height: 125vh; width: 100%;">
-    <img style="position: absolute; right:0; top:0; min-width: 80vw; mix-blend-mode: screen; z-index: 100;" src="lighthouse/moonwhale.png" />
     <img style="position: absolute; right:0; top:25vh; min-height:100vh; min-width:100%; mix-blend-mode: screen;" src="lighthouse/highway.gif" />
 
-    <Autolayout x={.1} y={.6}>
-      <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
-        <span>It wasn't until the ride home that I heard the family dog had been run over.</span>
-        <span style="margin-left: 3em"> When I was in college I learned that Luna died too,</span>
-        <span style="margin-left: 3em"> caught in the motor of some other boat.</span>
-      </div>
-    </Autolayout>
-
-    <Autolayout x={.9} y={1} style="
+        <Autolayout x={.9} y={1} style="
       position: relative; min-height: 100vh;
       margin-top: 25vh;
     ">
       <img style="width: 100vh; max-width: 45vw; position: relative;" src="lighthouse/family_photo.jpg" />
     </Autolayout>
+
+    <Autolayout x={.1} y={.8}>
+      <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
+        <span class="stroked large-9">It wasn't until the ride home that I heard the family dog had been run over.</span>
+        <span class="stroked medium-14 indented">When I was in college I learned that Luna died too,</span>
+        <span class="stroked medium-8 indented">caught in the motor of some other boat.</span>
+      </div>
+    </Autolayout>
+
+
 </div>
-    
-  </section>
+
+</section>
+
+<ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]} blend="screen" offset={-1} height="100vh"> 
+  <img style="    position: absolute;
+    right: 0px;
+    top: 0px;
+    min-width: 80vw;
+    min-height: 100%;
+    max-width: 100%; 
+    object-fit: cover;
+    object-position: 15% top;
+    mix-blend-mode: screen;" src="lighthouse/moonwhale.jpg" />
+</ParallaxElem>
 <img style="width:100vw; height:100vh; object-fit: cover;" src="lighthouse/nightlights.webp" alt="">

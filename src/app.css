@@ -17,15 +17,30 @@
     .textblock span{
       padding: .5em;
       margin-bottom: 2px;
-      background: #fff;
       position: relative;
       z-index: 1000;
+      transform: translateX(.5em);
+      transition: opacity 800ms ease-in, transform 1400ms ease-out;
+    }
+
+    .textblock span.indented{
+      transform: translateX(1.5em);
+      opacity:0;
     }
 
     .textblock.visible{
       opacity:1;
       filter: blur(0px) brightness(.8) contrast(21.5);
-    
+    }
+
+    .textblock.visible span{
+      transform: translateX(0);
+      
+    }
+
+    .textblock.visible span.indented{
+      transform: translateX(3em);
+      opacity:1;
     }
 
     .textblock span.spacer{
@@ -36,7 +51,7 @@
     }
 
     section{
-      display: flex;
+    display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
@@ -44,9 +59,78 @@
     padding-bottom: 2rem;
     min-height: 100vh;
     }
-    section.horizontal{
+
+    div.horizontal{
+      display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       margin:0 auto;
-
+      max-width: 100%;
+      align-items: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      gap: 2em;
     }
+
+
+.stroked:before{
+  content:"";
+  display: block;
+  position: absolute;
+  top:0; left:0; bottom: 0; right:0;
+  border: 9px solid;
+  border-image: url(strokes/555.png) 20 18 fill;
+  border-image-outset: 2.5 1;
+  background-color: initial !important;
+  z-index: -1;
+  /*filter: invert();*/
+}
+
+.stroked.small-1:before{   border-image-source: url('strokes/80.png');}
+.stroked.small-2:before{   border-image-source: url('strokes/98.png');}
+.stroked.small-3:before{   border-image-source: url('strokes/115.png');}
+.stroked.small-4:before{   border-image-source: url('strokes/139.png');}
+.stroked.small-5:before{   border-image-source: url('strokes/164.png');}
+.stroked.small-6:before{   border-image-source: url('strokes/205.png');}
+.stroked.small-7:before{   border-image-source: url('strokes/257.png');}
+.stroked.small-8:before{   border-image-source: url('strokes/260.png');}
+.stroked.small-9:before{   border-image-source: url('strokes/265.png');}
+.stroked.small-10:before{  border-image-source: url('strokes/266.png');}
+.stroked.small-11:before{  border-image-source: url('strokes/289.png');}
+.stroked.small-12:before{  border-image-source: url('strokes/303.png');}
+.stroked.small-13:before{  border-image-source: url('strokes/317.png');}
+.stroked.small-14:before{  border-image-source: url('strokes/329.png');}
+.stroked.small-15:before{  border-image-source: url('strokes/375.png');}
+.stroked.medium-1:before{  border-image-source: url('strokes/377.png');}
+.stroked.medium-2:before{  border-image-source: url('strokes/386.png');}
+.stroked.medium-3:before{  border-image-source: url('strokes/400.png');}
+.stroked.medium-4:before{  border-image-source: url('strokes/442.png');}
+.stroked.medium-5:before{  border-image-source: url('strokes/461.png');}
+.stroked.medium-6:before{  border-image-source: url('strokes/492.png');}
+.stroked.medium-7:before{  border-image-source: url('strokes/501.png');}
+.stroked.medium-8:before{  border-image-source: url('strokes/530.png');}
+.stroked.medium-9:before{  border-image-source: url('strokes/545.png');}
+.stroked.medium-10:before{ border-image-source: url('strokes/555.png');}
+.stroked.medium-11:before{ border-image-source: url('strokes/578.png');}
+.stroked.medium-12:before{ border-image-source: url('strokes/632.png');}
+.stroked.medium-13:before{ border-image-source: url('strokes/675.png');}
+.stroked.medium-14:before{ border-image-source: url('strokes/725.png');}
+.stroked.medium-15:before{ border-image-source: url('strokes/818.png');}
+.stroked.large-1:before{   border-image-source: url('strokes/830.png');}
+.stroked.large-2:before{   border-image-source: url('strokes/850.png');}
+.stroked.large-3:before{   border-image-source: url('strokes/860.png');}
+.stroked.large-4:before{   border-image-source: url('strokes/908.png');}
+.stroked.large-5:before{   border-image-source: url('strokes/929.png');}
+.stroked.large-6:before{   border-image-source: url('strokes/935.png');}
+.stroked.large-7:before{   border-image-source: url('strokes/958.png');}
+.stroked.large-8:before{   border-image-source: url('strokes/977.png');}
+.stroked.large-9:before{   border-image-source: url('strokes/983.png');}
+.stroked.large-10:before{  border-image-source: url('strokes/990.png');}
+.stroked.large-11:before{  border-image-source: url('strokes/1117.png');}
+.stroked.large-12:before{  border-image-source: url('strokes/1196.png');}
+.stroked.large-13:before{  border-image-source: url('strokes/1322.png');}
+.stroked.large-14:before{  border-image-source: url('strokes/1378.png');}
+.stroked.large-15:before{  border-image-source: url('strokes/1391.png');}
+.stroked.large-16:before{  border-image-source: url('strokes/1430.png');}
+.stroked.large-17:before{  border-image-source: url('strokes/1537.png');}
+
