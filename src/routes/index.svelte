@@ -9,29 +9,42 @@
   let sectionHeights = [];
 </script>
 
-  <section style="padding-top: 0; padding-bottom: 25vh;" bind:offsetHeight={sectionHeights[0]}>
+  <section style="padding-top: 0; padding-bottom: 25vh; height: 100vh" bind:offsetHeight={sectionHeights[0]}>
 
-    <ParallaxElem speed="-40" height={sectionHeights[0]}>
-      <img style="position:absolute; width:100vw; height:100vh; top:0; right:0; object-position: right bottom; object-fit: cover; image-rendering: pixelated;" src="lighthouse/sky_dithering.png" />
+    <ParallaxElem speed="-40" height="100vh">
+      <img style="
+      position:absolute; 
+      top:0; right:0;
+      object-position: right bottom;  
+      object-fit: cover; 
+      image-rendering: pixelated;
+      width: 100%; 
+      height:min(100vw, 100vh);" src="lighthouse/sky_dithering.png" />
     </ParallaxElem>
 
-    <ParallaxElem speed="-10" blend="multiply" height={sectionHeights[0]}>
-      <img style="height: 100vh; margin-right: auto;" src="lighthouse/lighthouse_bw.jpg" />
+    <ParallaxElem speed="-10" blend="multiply" height="100vh" offset=".25">
+      <img style="
+      height: max(50vw, 80vh); 
+      margin-right: auto; 
+      max-width: 100%; 
+      object-position: 12% bottom; 
+      margin-top:auto; 
+      object-fit: cover;" src="lighthouse/lighthouse_bw.png" />
     </ParallaxElem>
 
 
-    <Autolayout x={.9} y={.2}>
+    <Autolayout x={.9} y={0.1}>
         <!-- <img style="width: calc(100vw - 1859/1499*100vh*.75); height: 75vh; object-fit: contain; object-position: calc(50% + 3vw) 30%; position:relative; margin-left: auto; mix-blend-mode: multiply; filter: blur(0px) brightness(.75) contrast(15.5); 
       transition: filter 3000ms ease-out;
       /* filter: blur(18px) brightness(2) contrast(15.5);" src="lighthouse/title3.webp" />-->
-      <video style="mix-blend-mode: multiply; max-width: 100%;" src="lighthouse/title3.mp4" muted autoplay loop></video>
+      <video style="mix-blend-mode: multiply; width: calc(55vh * 800/496); max-width: 100%;" src="lighthouse/title3.mp4" muted autoplay loop></video>
     </Autolayout>
 
 
   </section>
   
   <section style="padding: 15vh 0;" bind:offsetHeight={sectionHeights[1]}>
-    <ParallaxElem speed="-2" blend="multiply" top={sectionHeights[0]} height={sectionHeights[1]}>
+    <ParallaxElem speed="-2" blend="multiply" top={sectionHeights[0]} height={sectionHeights[1] + 'px'}>
       <img style="position: absolute; bottom:0; left:20%; height:calc(100%); min-width: 80%; align-self: stretch; mix-blend-mode:multiply;" src="lighthouse/wavesglitch.jpg" />
     </ParallaxElem>
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
@@ -70,7 +83,7 @@
 
     <img style="position: absolute; right:0; bottom:0; height:100%; width:100%;" src="lighthouse/pixelsort_waves.png" />
 
-    <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1]} offset={0.25} height={sectionHeights[2]}>
+    <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1]} offset={0.25} height={sectionHeights[2] + 'px'}>
       <Autolayout x={.8} style="
         transform: translateY(15%);
         z-index: 100;
@@ -92,7 +105,7 @@
 
   <section style="
   background-image: url('lighthouse/darktexture.jpg');
-  background-size: 100% auto;
+  background-size: cover;
   background-attachment: fixed;
   "
   bind:offsetHeight={sectionHeights[3]}>

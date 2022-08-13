@@ -6,6 +6,7 @@
     .textblock{
       font-family: 'IBM Plex Mono', monospace;
       font-style: italic;
+      font-size: max(11px, calc(5px + 1vw));
       display: flex;
       flex-direction: column;
       align-items: start;
