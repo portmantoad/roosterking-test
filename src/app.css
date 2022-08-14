@@ -10,7 +10,7 @@
       display: flex;
       flex-direction: column;
       align-items: start;
-      filter: blur(2px) brightness(1.8) contrast(21.5);
+      filter: blur(2px);
       opacity:0;
       transition: opacity 600ms ease-in, filter 1000ms ease-out;
     }
@@ -19,18 +19,18 @@
       margin-bottom: 2px;
       position: relative;
       z-index: 1000;
-      transform: translateX(.5em);
+      transform: translateX(.25em);
       transition: opacity 800ms ease-in, transform 1400ms ease-out;
     }
 
     .textblock span.indented{
-      transform: translateX(1.5em);
+      transform: translateX(2em);
       opacity:0;
     }
 
     .textblock.visible{
       opacity:1;
-      filter: blur(0px) brightness(.8) contrast(21.5);
+      filter: blur(0px);
     }
 
     .textblock.visible span{

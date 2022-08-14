@@ -44,7 +44,7 @@
   </section>
   
   <section style="padding: 15vh 0;" bind:offsetHeight={sectionHeights[1]}>
-    <ParallaxElem speed="-2" blend="multiply" top={sectionHeights[0]} height={sectionHeights[1] + 'px'}>
+    <ParallaxElem speed="-2" blend="multiply" top={sectionHeights[0] + 'px'} height={sectionHeights[1] + 'px'}>
       <img style="position: absolute; bottom:0; left:20%; height:calc(100%); min-width: 80%; align-self: stretch; mix-blend-mode:multiply;" src="lighthouse/wavesglitch.jpg" />
     </ParallaxElem>
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
@@ -77,13 +77,13 @@
 
   <section style="min-height: 100vh;" bind:offsetHeight={sectionHeights[2]}>
 
-    <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1]} offset={-0.5}>
+    <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1] + 'px'} offset={-0.5}>
       <img style="width:40em; max-width:95vw; image-rendering: pixelated; position: relative;" src="lighthouse/orcawhale.gif" />
     </ParallaxElem>
 
     <img style="position: absolute; right:0; bottom:0; height:100%; width:100%;" src="lighthouse/pixelsort_waves.png" />
 
-    <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1]} offset={0.25} height={sectionHeights[2] + 'px'}>
+    <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1] + 'px'} offset={0.25} height={sectionHeights[2] + 'px'}>
       <Autolayout x={.8} style="
         transform: translateY(15%);
         z-index: 100;
@@ -104,9 +104,12 @@
   </section>
 
   <section style="
-  background-image: url('lighthouse/darktexture.jpg');
+  background: linear-gradient(
+      rgba(255, 0, 0, 0), 
+      rgba(0, 0, 0, 1) 
+  ), 
+  url('lighthouse/darktexture.jpg') fixed;
   background-size: cover;
-  background-attachment: fixed;
   "
   bind:offsetHeight={sectionHeights[3]}>
 <!--     <ParallaxElem speed="-10" top={sectionHeights[0] + sectionHeights[1] + sectionHeights[2]} offset={0.2} height={sectionHeights[3]}>
@@ -127,7 +130,7 @@
 
     </Autolayout>
 
-    <div class="horizontal">
+    <div class="horizontal" style="margin-bottom: 25vh;">
       <img style="position: relative; width: 35em; padding: 1em; max-width: calc(100vw - 2em);" src="lighthouse/boys.jpg" />
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
         <span class="stroked medium-5">When I got up to use the bathroom</span>
@@ -137,16 +140,26 @@
     </div>
 
 <div style="position: relative; min-height: 125vh; width: 100%;">
-    <img style="position: absolute; right:0; top:25vh; min-height:100vh; min-width:100%; mix-blend-mode: screen;" src="lighthouse/highway.gif" />
 
-        <Autolayout x={.9} y={1} style="
+    <Autolayout x={.9} y={1} style="
       position: relative; min-height: 100vh;
       margin-top: 25vh;
     ">
-      <img style="width: 100vh; max-width: 45vw; position: relative;" src="lighthouse/family_photo.jpg" />
+      <img style="width: 35em; padding: 1em; max-width: calc(100vw - 2em); position: relative;" src="lighthouse/family_photo.jpg" />
     </Autolayout>
 
-    <Autolayout x={.1} y={.8}>
+    <img style="
+    position: absolute; 
+    left:0; 
+    top: 0; 
+    max-width:100%;
+    height:100vh;
+    object-fit: cover; 
+    mix-blend-mode: screen;" src="lighthouse/highway.gif" />
+
+
+
+    <Autolayout x={.1} y={.5}>
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
         <span class="stroked large-9">It wasn't until the ride home that I heard the family dog had been run over.</span>
         <span class="stroked medium-14 indented">When I was in college I learned that Luna died too,</span>
@@ -159,15 +172,16 @@
 
 </section>
 
-<ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]} blend="screen" offset={-1} height="100vh"> 
-  <img style="    position: absolute;
-    right: 0px;
-    top: 0px;
+<ParallaxElem speed="2" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px - 75vh)`} blend="screen" offset="-0.5"> 
+  <img style="
     min-width: 80vw;
-    min-height: 100%;
+    min-height: 100vh;
     max-width: 100%; 
+    margin-left: auto;
     object-fit: cover;
     object-position: 15% top;
     mix-blend-mode: screen;" src="lighthouse/moonwhale.jpg" />
 </ParallaxElem>
-<img style="width:100vw; height:100vh; object-fit: cover;" src="lighthouse/nightlights.webp" alt="">
+
+<img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset.webp" alt="">
+<!-- <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% bottom; margin-top: -100vh; display: block; image-rendering: pixelated; mix-blend-mode: screen;" src="https://web.archive.org/web/20090805103745/http://www.geocities.com/jolleen.geo/fallingleavesbg.gif" alt=""> -->

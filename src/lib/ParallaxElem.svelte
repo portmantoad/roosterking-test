@@ -32,7 +32,7 @@
     justify-content: center;
     pointer-events: none;
     z-index: calc(var(--speed) * 100);
-    top: calc(var(--top) * 1px);
+    top: var(--top);
     height: var(--height);
     transform: translateY( calc(var(--offset) * 100%));
     mix-blend-mode: var(--blend);
