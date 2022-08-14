@@ -34,4 +34,4 @@ var module2 = __toESM(require("../entries/pages/__layout.svelte.js"));
 const index = 0;
 const file = "_app/immutable/pages/__layout.svelte-35f04364.js";
 const imports = ["_app/immutable/pages/__layout.svelte-35f04364.js", "_app/immutable/chunks/index-fa909dd1.js"];
-const stylesheets = ["_app/immutable/assets/__layout-373fec3f.css"];
+const stylesheets = ["_app/immutable/assets/__layout-5e3dd31d.css"];

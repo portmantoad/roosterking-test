@@ -88,7 +88,7 @@
         transform: translateY(15%);
         z-index: 100;
       ">
-        <img style="width: min(85vh, 90vw); position: relative;" src="lighthouse/rpg_island.png" />
+        <img style="width: min(85vh, 90vw); position: relative;" src="lighthouse/rpg_island-optim.png" />
       </Autolayout>
     </ParallaxElem>
 
@@ -128,7 +128,7 @@
     </Autolayout>
 
     <div class="horizontal">
-      <img style="position: relative; width: 35em; padding: 1em; max-width: calc(100vw - 2em);" src="lighthouse/boys.png" />
+      <img style="position: relative; width: 35em; padding: 1em; max-width: calc(100vw - 2em);" src="lighthouse/boys.jpg" />
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
         <span class="stroked medium-5">When I got up to use the bathroom</span>
         <span class="stroked medium-10">I thought I saw a look flash across his face.</span>
