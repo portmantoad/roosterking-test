@@ -139,7 +139,7 @@
       </div>
     </div>
 
-<div style="position: relative; min-height: 125vh; width: 100%;">
+<div style="position: relative; min-height: 125vh; width: 100%; margin-bottom: 25vh">
 
     <Autolayout x={.9} y={1} style="
       position: relative; min-height: 100vh;
@@ -172,7 +172,7 @@
 
 </section>
 
-<ParallaxElem speed="2" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px - 75vh)`} blend="screen" offset="-0.5"> 
+<ParallaxElem speed="2" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px - 100vh)`} blend="screen" offset="-0.5"> 
   <img style="
     min-width: 80vw;
     min-height: 100vh;
@@ -186,4 +186,6 @@
 <!-- <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset.webp" alt="">
 <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% bottom; margin-top: -100vh; display: block; image-rendering: pixelated; mix-blend-mode: screen;" src="https://web.archive.org/web/20090805103745/http://www.geocities.com/jolleen.geo/fallingleavesbg.gif" alt=""> -->
 <ParallaxElem speed="-20" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px)`}><div style="
-background:#000; padding-top: 50vh;"><video style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset-small.mp4" muted autoplay loop></video></div></ParallaxElem>
+background:rgb(0,1,30); padding-top: 50vh;"><video style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block; mix-blend-mode: screen;" src="lighthouse/sunset-small.mp4" muted autoplay loop></video></div></ParallaxElem>
+
+<section style="height:100vh;"><video style="width: 50em; padding: 1em; max-width: calc(100vw - 2em); margin:auto; mix-blend-mode: screen;" src="/lighthouse/something_lyrics.mp4" controls></video></section>
