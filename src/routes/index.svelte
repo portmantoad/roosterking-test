@@ -117,7 +117,7 @@
   </ParallaxElem> -->
 
     <Autolayout x={.35} y={.5} style="
-      position: relative; min-height: 70vh;
+      position: relative; min-height: 50vh;
     ">
 
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
@@ -183,5 +183,7 @@
     mix-blend-mode: screen;" src="lighthouse/moonwhale.jpg" />
 </ParallaxElem>
 
-<img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset.webp" alt="">
-<!-- <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% bottom; margin-top: -100vh; display: block; image-rendering: pixelated; mix-blend-mode: screen;" src="https://web.archive.org/web/20090805103745/http://www.geocities.com/jolleen.geo/fallingleavesbg.gif" alt=""> -->
+<!-- <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset.webp" alt="">
+<img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% bottom; margin-top: -100vh; display: block; image-rendering: pixelated; mix-blend-mode: screen;" src="https://web.archive.org/web/20090805103745/http://www.geocities.com/jolleen.geo/fallingleavesbg.gif" alt=""> -->
+<ParallaxElem speed="-20" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px)`}><div style="
+background:#000; padding-top: 50vh;"><video style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset-small.mp4" muted autoplay loop></video></div></ParallaxElem>
