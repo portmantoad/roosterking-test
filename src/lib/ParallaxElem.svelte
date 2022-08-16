@@ -1,9 +1,18 @@
+<!-- TODO: replace "top" with "pin", supplying an element selector
+
+offsetTop
+offsetLeft
+offsetWidth
+offsetHeight
+
+-->
+
 <script>
   import { portal } from "svelte-portal";
 
   export let offset = 0;
   export let top = 0;
-  export let height = 0;
+  export let height = 'initial';
   export let speed = -2;
   export let blend = 'initial';
 

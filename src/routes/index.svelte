@@ -75,7 +75,7 @@
 
   </section>
 
-  <section style="min-height: 100vh;" bind:offsetHeight={sectionHeights[2]}>
+  <section style="min-height: max(60vh, 50vw);" bind:offsetHeight={sectionHeights[2]}>
 
     <ParallaxElem speed="2" top={sectionHeights[0] + sectionHeights[1] + 'px'} offset={-0.5}>
       <img style="width:40em; max-width:95vw; image-rendering: pixelated; position: relative;" src="lighthouse/orcawhale.gif" />
@@ -130,7 +130,7 @@
 
     </Autolayout>
 
-    <div class="horizontal" style="margin-bottom: 25vh;">
+    <div class="horizontal" style="margin-bottom: 10vh;">
       <img style="position: relative; width: 35em; padding: 1em; max-width: calc(100vw - 2em);" src="lighthouse/boys.jpg" />
       <div use:inview={options} on:enter={(event) => { event.detail.node.classList.add('visible');}} class="textblock" style="margin: auto;">
         <span class="stroked medium-5">When I got up to use the bathroom</span>
@@ -139,11 +139,11 @@
       </div>
     </div>
 
-<div style="position: relative; min-height: 125vh; width: 100%; margin-bottom: 25vh">
+<div style="position: relative; min-height: 110vh; width: 100%; margin-bottom: 10vh">
 
     <Autolayout x={.9} y={1} style="
       position: relative; min-height: 100vh;
-      margin-top: 25vh;
+      margin-top: 10vh;
     ">
       <img style="width: 35em; padding: 1em; max-width: calc(100vw - 2em); position: relative;" src="lighthouse/family_photo.jpg" />
     </Autolayout>
@@ -172,7 +172,7 @@
 
 </section>
 
-<ParallaxElem speed="2" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px - 100vh)`} blend="screen" offset="-0.5"> 
+<ParallaxElem speed="2" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px - 55vh)`} blend="screen" offset="-0.65"> 
   <img style="
     min-width: 80vw;
     min-height: 100vh;
@@ -185,7 +185,7 @@
 
 <!-- <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block;" src="lighthouse/sunset.webp" alt="">
 <img style="width:100vw; height:100vh; object-fit: cover; object-position: 40% bottom; margin-top: -100vh; display: block; image-rendering: pixelated; mix-blend-mode: screen;" src="https://web.archive.org/web/20090805103745/http://www.geocities.com/jolleen.geo/fallingleavesbg.gif" alt=""> -->
-<ParallaxElem speed="-20" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px)`}><div style="
-background:rgb(0,1,30); padding-top: 50vh;"><video style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block; mix-blend-mode: screen;" src="lighthouse/sunset-small.mp4" muted autoplay loop></video></div></ParallaxElem>
+<ParallaxElem speed="-15" top={`calc(${sectionHeights[0] + sectionHeights[1] + sectionHeights[2] + sectionHeights[3]}px)`}><div style="
+background:rgb(0,1,30);"><video style="width:100vw; height:100vh; object-fit: cover; object-position: 40% top; display: block; mix-blend-mode: screen;" src="lighthouse/sunset-small.mp4" muted autoplay loop></video></div></ParallaxElem>
 
-<section style="height:100vh;"><video style="width: 50em; padding: 1em; max-width: calc(100vw - 2em); margin:auto; mix-blend-mode: screen;" src="/lighthouse/something_lyrics.mp4" controls></video></section>
+<section style="min-height:100vh;"><video style="width: 50em; padding: .5em; max-width: calc(100vw - 1em); margin:auto; mix-blend-mode: screen;" src="/lighthouse/something_lyrics.mp4" controls></video></section>
